@@ -1,0 +1,87 @@
+//== Оформление
+//
+//## Тип, высота отступов, и цвет для основного шрифта документа.
+
+$font-family-sans-serif:  "", Helvetica, Arial, sans-serif !default;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+//** Базовые моношрифтовые шрифты для  `<code>`, `<kbd>`, и `<pre>`.
+$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base:        $font-family-sans-serif !default;
+
+$font-size-base:          14px !default;
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
+$font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h5:            $font-size-base !default;
+$font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
+
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base:        1.428571429 !default; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
+
+//** By default, this inherits from the `<body>`.
+$headings-font-family:    inherit !default;
+$headings-font-weight:    400 !default;
+$headings-line-height:    1.1 !default;
+$headings-color:          inherit !default;
+
+
+//== Определение контрольных точкек, при которых макет будет меняться, приспосабливаясь к различным размерам экрана.
+// Самый маленький разсер экрана / телефон
+$screen-xs:                  480px !default;
+$screen-xs-min:              $screen-xs !default;
+$screen-phone:               $screen-xs-min !default;
+
+// Маленький размер экра / планшет
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+$screen-tablet:              $screen-sm-min !default;
+
+// Средний размер экрана / монитор
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+$screen-desktop:             $screen-md-min !default;
+
+// Большой размер экрана / широкий монитор
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// Определение точек максимума, при которых сработают визуальные изменения 
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+//== Базовая разметка
+//** Количество колонок в базовой сетке. 
+$grid-columns:              12 !default;
+//** Базовые отступы между колонок. Значение делиться пополам для левой и правой части.
+$grid-gutter-width:         30px !default;
+//** Позиционирование навигации
+//** Точка, при достижении которой навигационное меню становиться полноразмерным (После 768px).   
+$grid-float-breakpoint:     $screen-sm-min !default;
+//** Точка, в которой меню становиться кнопкой с выподающим списком. 
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
+
+//== Базовые размеры контейнера
+//## Определяем максимальную ширину `.container` для различных размеров экрана.
+
+// Маленький размер экрана / планшет
+$container-tablet:             (720px + $grid-gutter-width) !default;
+//** Для `$screen-sm-min` и выше.
+$container-sm:                 $container-tablet !default;
+
+// Средний размер экрана / монитор
+$container-desktop:            (940px + $grid-gutter-width) !default;
+//** Для `$screen-md-min` и выше.
+$container-md:                 $container-desktop !default;
+
+// Большой размер экрана / широкий монитор
+$container-large-desktop:      (1140px + $grid-gutter-width) !default;
+//** Для `$screen-lg-min` и выше.
+$container-lg:                 $container-large-desktop !default;

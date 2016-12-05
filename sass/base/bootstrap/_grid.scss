@@ -1,0 +1,52 @@
+//== Базовая разметка
+//** Устанавливаем ширину контейнера
+.container {
+  @include container-fixed;
+
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+  }
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
+}
+//** Резиновый контейнер
+
+.container-fluid {
+  @include container-fixed;
+}
+
+//** Строка
+
+.row {
+  @include make-row;
+}
+
+//** Колонки
+
+@include make-grid-columns;
+
+//** Очень маленькая сетка
+
+@include make-grid(xs);
+
+//** Маленькая сетка
+
+@media (min-width: $screen-sm-min) {
+  @include make-grid(sm);
+}
+
+//** Средняя сетка
+
+@media (min-width: $screen-md-min) {
+  @include make-grid(md);
+}
+
+//** Большая сетка
+
+@media (min-width: $screen-lg-min) {
+  @include make-grid(lg);
+}

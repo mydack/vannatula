@@ -1,0 +1,25 @@
+/* Base - 1 layer
+---------------------------------------------------------------------------------- */
+
+/* Forms
+-------------------------------------------------- */
+.form_i { /* Form item */
+	margin-bottom: 20px;
+}
+
+.it {
+	position: relative;
+	margin: 0;
+	width: 100%;
+	height: 17px; /* For win webkit */
+	padding: 3px 0 4px 3px;
+	box-sizing: content-box;	
+	font-size: 18px;
+	color: #9e9e9e;
+	line-height: 17px;
+	*line-height: 16px;
+	text-transform: uppercase;
+	background-color: #fff;
+	border: #e0e0e0 solid 2px;
+}
+/* /forms */
